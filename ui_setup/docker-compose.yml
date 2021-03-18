@@ -1,0 +1,33 @@
+version: '3.4'
+
+services: 
+  # logstash:
+  #   build: .
+  #   container_name: logstash
+  #   ports: 
+  #     - 5959:5959
+  #   volumes: 
+  #       - ./.docker/logstash/pipeline/:/usr/share/logstash/pipeline/
+  #   command: logstash -f /logstash_dir/logstash_http.conf
+
+  elasticsearch:
+        image: elasticsearch:7.10.1
+        container_name: elasticsearch
+        ports:
+            - 9200:9200
+            - 9300:9300
+        environment: 
+          - xpack.security.enabled=false
+          - discovery.type=single-node
+        volumes:
+            -  ./.docker/elasticsearch/esdata:/usr/share/elasticsearch/data
+
+  kibana:
+        image: kibana:7.10.1
+        container_name: kibana
+        ports:
+            - 5601:5601
+        depends_on:
+            - elasticsearch 
+        environment:
+          - "ELASTICSEARCH_URL=http://elasticsearch:9200"
