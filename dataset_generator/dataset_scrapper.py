@@ -1,7 +1,7 @@
 import requests
 
 
-api = 'https://api.tiingo.com/tiingo/daily/eth/prices?startDate=2012-1-1&endDate=2021-3-1&format=csv'
+api = 'https://api.tiingo.com/tiingo/daily/btcusd/prices?startDate=2006-1-1&endDate=2021-3-1&format=csv'
 
 headers = {
     'Content-Type': 'application/json',
@@ -9,7 +9,6 @@ headers = {
 }
 
 request = requests.get(api, headers=headers)
-
 csv_file = open('eth.csv', 'wb')
 csv_file.write(request.content)
 csv_file.close()
