@@ -43,3 +43,8 @@ For example, if a share with a closing price of $100 paid a $5 dividend per shar
 _A stock dividend is a dividend payment to shareholders that is made in shares rather than as cash.
 The stock dividend has the advantage of rewarding shareholders without reducing the company's cash balance, although it can dilute earnings per share._
 
+#### PowerPoint Presentation Link
+https://docs.google.com/presentation/d/1Rj-e4bb1pUaDHndGTY_I6D19JrNh8d7k94rn9ryuGs4/edit?usp=sharing
+
+#### Project Proposition Doc Link
+https://docs.google.com/document/d/1Rho9xUgQ1Zw8pa6Mun2lgVEE-gzQNlafBID3LpsTBYA/edit?usp=sharing
