@@ -1,15 +1,6 @@
 version: '3.4'
 
-services: 
-  # logstash:
-  #   build: .
-  #   container_name: logstash
-  #   ports: 
-  #     - 5959:5959
-  #   volumes: 
-  #       - ./.docker/logstash/pipeline/:/usr/share/logstash/pipeline/
-  #   command: logstash -f /logstash_dir/logstash_http.conf
-
+services:
   elasticsearch:
         image: elasticsearch:7.10.1
         container_name: elasticsearch
