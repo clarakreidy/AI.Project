@@ -3,7 +3,8 @@ import io
 import pandas as pd
 import numpy as np
 
-api = 'https://api.tiingo.com/tiingo/daily/btcusd/prices?startDate=2006-1-1&endDate=2021-5-3&format=csv'
+
+api = 'https://api.tiingo.com/tiingo/daily/adausd/prices?startDate=2015-1-1&endDate=2021-5-1&format=csv'
 
 headers = {
     'Content-Type': 'application/json',
