@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   elasticsearch:
-    build: ./elasticsearch/
+    image: elasticsearch:7.10.1
     container_name: elasticsearch
     ports:
         - 9200:9200
@@ -23,13 +23,24 @@ services:
     environment:
       - "ELASTICSEARCH_URL=http://elasticsearch:9200"
 
+  logstash:
+    build: ./logstash
+    container_name: logstash
+    ports:
+      - 5044:5044
+      - 5000:5000/tcp
+      - 5000:5000/udp
+      - 9600:9600
+    depends_on:
+      - elasticsearch
+      - kibana
+    environment:
+      - "ELASTICSEARCH_URL=http://elasticsearch:9200"
+    command: logstash -f /tmp/logstash.conf
+
   wizard:
     container_name: dashboard_wizard
     build: ./wizard
-    environment:
-      - "ELASTICSEARCH_URL=http://elasticsearch:9200"
-      - "KIBANA_URL=http://kibana:5601"
-    command: [ '/bin/bash', '-c', 'cat /tmp/sample/load-sample-data.sh | tr -d "\r" | bash' ]
     depends_on:
       - elasticsearch
       - kibana
