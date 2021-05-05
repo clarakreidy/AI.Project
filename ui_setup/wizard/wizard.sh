@@ -13,6 +13,7 @@ until curl -s http://kibana:5601/api/task_manager/_health -o /dev/null; do
     sleep 1
 done
 
+sleep 5
 cd /tmp
 
 #load dashboard
