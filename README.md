@@ -64,6 +64,3 @@ Adjusted values incorporate changes resulting from corporate actions such as div
 
 #### PowerPoint Presentation Link
 https://docs.google.com/presentation/d/1Rj-e4bb1pUaDHndGTY_I6D19JrNh8d7k94rn9ryuGs4/edit?usp=sharing
-
-#### Project Proposition Doc Link
-https://docs.google.com/document/d/1Rho9xUgQ1Zw8pa6Mun2lgVEE-gzQNlafBID3LpsTBYA/edit?usp=sharing
